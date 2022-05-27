@@ -1,0 +1,116 @@
+<div class="container">
+
+    <div class="box mt-5 p-5">
+        <h1>CREATE NEW STUDENT DETAILS</h1>
+    </div>
+    
+   <div class="fam">      
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="studentname">studentname</label>
+            <input 
+                formControlName="studentname"
+                id="studentname" 
+                type="text" 
+                class="form-control">
+
+            <div *ngIf="f.studentname.touched && f.studentname.invalid" class="alert alert-danger">
+                <div *ngIf="f.studentname.errors?.required">Name is required.</div>
+            </div>
+        </div>
+        
+        <br>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input
+                formControlName="email"
+                id="email" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+                <div *ngIf="f.email.errors?.required">email is required.</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="phonenumber">phonenumber</label>
+            <input
+                formControlName="phonenumber"
+                id="phonenumber" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.phonenumber.touched && f.phonenumber.invalid" class="alert alert-danger">
+                <div *ngIf="f.phonenumber.errors?.required">phonenumber is required.</div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label for="age">age</label>
+            <input
+                formControlName="age"
+                id="age" 
+                type="text" 
+                class="form-control">
+            
+            <div *ngIf="f.age.touched && f.age.invalid" class="alert alert-danger">
+                <div *ngIf="f.age.errors?.required">Age is required.</div>
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="form-group">
+            <label for="age">age</label>
+            <input
+                formControlName="age"
+                id="age" 
+                type="text" 
+                class="form-control">
+            
+            <div *ngIf="f.age.touched && f.age.invalid" class="alert alert-danger">
+                <div *ngIf="f.age.errors?.required">Age is required.</div>
+            </div>
+        </div>
+
+        <br>
+         <div class="form-group">
+              <label for="">joineddate</label>
+              <input type="date" 
+               id="joineddate" 
+               name="joineddate" 
+               formControlName="joineddate">   
+      
+          <div *ngIf="f.joineddate.touched && f.joineddate.invalid" class="alert alert-danger">
+          <div *ngIf="f.joineddate.errors?.required">Joined date is required.</div>
+         </div>
+    
+</div>
+     <br>   
+    <div class="form-group">
+        <label for="gender">gender:</label>
+        <div>
+          <input type="radio" value="Male" name="gender" formControlName="gender">
+          <label for="Male">Male</label>
+       </div>
+
+       <div>
+          <input type="radio" value="Female" name="gender" formControlName="gender">
+          <label for="Female">Female</label>
+       </div>
+          
+        <div *ngIf="f.gender.touched && f.gender.invalid" class="alert alert-danger">
+            <div *ngIf="f.gender.errors.required">Gender is required.</div>
+        </div>
+    </div>
+
+  <div class="but">
+    <a href="#" routerLink="/studenttest/index/" class="btn btn-primary">Back</a>
+    &nbsp;&nbsp;
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+  </div>   
+    </form>
+</div>
+</div> 

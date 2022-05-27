@@ -1,0 +1,44 @@
+export class Student {
+    
+       [{ 
+        name:'Mahesh,'
+        email:'mahesh@gmail.com,'
+        age:26,
+        phonenumber:9093231212,
+        gender:'Male,'
+        joineddate:'22/04/2021'
+       },
+       {
+        name:'Kumar,'
+        email:'kumar@gmail.com,'
+        age:26,
+        phonenumber:8093231222,
+        gender:'Male,'
+        joineddate:'23/04/2021'  
+       },
+       {
+           name:'Rajesh,'
+       email:'rajesh@gmail.com,'
+       age:24,
+       phonenumber:9993231212,
+       gender:'Male,'
+       joineddate:'22/04/2021'
+      },
+      {
+      name:'Geetha,'
+        email:'geetha@gmail.com,'
+        age:26,
+        phonenumber:9093231212,
+        gender:'Male,'
+        joineddate:'12/01/2020'
+      },
+      { 
+      name:'Ramya,'
+      email:'ramya@gmail.com,'
+      age:21,
+      phonenumber:9500001212,
+      gender:'Male,'
+      joineddate:'15/07/2019'
+    },
+    ]    
+}
